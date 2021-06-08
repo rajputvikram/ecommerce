@@ -1,0 +1,27 @@
+{% extends "common/base.html" %}
+<!---->
+{% load static %}
+<!---->
+{% block content %}
+
+<div class="container">
+  <main>
+    <div class="col">
+      <div class="row">
+        <div class="col-md-6">
+          <img
+            src="{{object.product_image.url}}"
+            alt="Image"
+            class="img-fluid tm-gallery-img"
+          />
+        </div>
+        <div class="col-md-6">
+          <h4 class="tm-gallery-title">{{object.name}}</h4>
+          <p class="tm-gallery-description">{{object.description}}</p>
+          <p class="tm-gallery-price">${{object.price}}</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% endblock content %}
+</div>
